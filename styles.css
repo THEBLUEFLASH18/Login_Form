@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    background: #04ACFA;
 }
 
 h1{
@@ -15,6 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #04ACFA;
 }
 
 
@@ -49,3 +49,41 @@ p {
 i {
     background-color: #E9E9EA;
 }
+
+
+.email {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.password {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.submit {
+    width: 104px;
+    height: 35px;
+    flex-shrink: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: #04ACFA;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+
