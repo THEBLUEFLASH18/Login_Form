@@ -59,7 +59,7 @@ i {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
-.submit {
+button {
     width: 104px;
     height: 35px;
     flex-shrink: 0;

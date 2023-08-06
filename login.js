@@ -7,23 +7,14 @@ import { getAuth, createUserWithEmailAndPassword} from "firebase/auth"
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAy4ZcpC1dFu31INK637buxdc1trjStJIA",
-  authDomain: "gaming-tournament-18.firebaseapp.com",
-  projectId: "gaming-tournament-18",
-  storageBucket: "gaming-tournament-18.appspot.com",
-  messagingSenderId: "394670526321",
-  appId: "1:394670526321:web:b6e60d71fd1e8ec46070d0",
-  measurementId: "G-4MR4WVTG3P"
-};
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(process.env.API_KEY);
 const analytics = getAnalytics(app);
 
 const auth = getAuth(app);
 
-const signUpForm = document.querySelector(".form");
+const signUpForm = document.querySelector(".signup");
 signUpForm.addEventListener('submit', (e) =>{
     e.preventDefault()
 
@@ -32,10 +23,10 @@ signUpForm.addEventListener('submit', (e) =>{
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((cred)=>{
-            console.log("User created: " + cred.user)
+            console.log("User created: ", cred.user)
             signUpForm.reset()
         })
         .catch((err)=>{
             console.log(err)
         })
-})
+});
