@@ -38,10 +38,14 @@ p {
 .loginbox {
     width: 328px;
     height: 358px;
-    flex-shrink: 0;
     border-radius: 8px;
     background: #E9E9EA;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
+i {
+    background-color: #E9E9EA;
+}
