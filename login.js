@@ -43,3 +43,13 @@ signUpForm.addEventListener('submit', (e) =>{
 });
 
 const signIn = document.querySelector(".signIn")
+signIn.addEventListener('submit', (e)=>{
+  e.preventDefault()
+
+  const email = signIn['signIn-email'].value
+  const password = signIn['signIn-password'].value
+  auth.signInWithEmailAndPassword(email, password)
+    .then(cred =>{
+      console.log(cred.user)
+    })
+})
