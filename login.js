@@ -28,7 +28,7 @@ const auth = getAuth(app);
 
 
 
-const signIn = document.querySelector(".signIn")
+const signIn = document.querySelector("#signIn")
 signIn.addEventListener('submit', (e)=>{
   e.preventDefault()
 
