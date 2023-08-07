@@ -25,16 +25,19 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
+const signUpForm = document.querySelector(".signup");
+signUpForm.addEventListener('submit', (e) =>{
+    e.preventDefault()
 
+    const email = signUpForm.email.value
+    const password = signUpForm.password.value
 
-const signIn = document.querySelector(".signIn")
-signIn.addEventListener('submit', (e)=>{
-  e.preventDefault()
-
-  const email = signIn['signIn-email'].value
-  const password = signIn['signIn-password'].value
-  auth.signInWithEmailAndPassword(email, password)
-    .then(cred =>{
-      console.log(cred.user)
-    })
-})
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((cred)=>{
+            console.log("User created: ", cred.user)
+            signUpForm.reset()
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+});
