@@ -7,10 +7,8 @@ import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.API_KEY
 
 const firebaseConfig = {
     apiKey: apiKey,
@@ -20,7 +18,11 @@ const firebaseConfig = {
     messagingSenderId: "394670526321",
     appId: "1:394670526321:web:8fa3d856731a7d536070d0",
     measurementId: "G-KZBYC63QZN"
-  };
+};
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
 
 
 
