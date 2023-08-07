@@ -35,7 +35,7 @@ p {
     list-style: normal;
 }
 
-.loginbox {
+.signUpBox {
     width: 328px;
     height: 358px;
     border-radius: 8px;
@@ -84,6 +84,10 @@ h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
     font-size: 25px;
+}
+
+a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 

@@ -41,3 +41,5 @@ signUpForm.addEventListener('submit', (e) =>{
             console.log(err)
         })
 });
+
+const signIn = document.querySelector(".signIn")
